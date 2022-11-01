@@ -1,0 +1,22 @@
+<div class="loginimage">
+<form [formGroup]="LoginForm"  style="margin-left: 20px;" >
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="email">
+        <label for="float-input">Enter Email id</label>
+        <div *ngIf="LoginForm.get('email')?.hasError('required') && LoginForm.get('email')?.touched ">email is required
+        </div>
+    </span>
+
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="password"> 
+        <label for="float-input"> password</label>
+    </span>
+    <br>
+    <button pButton pRipple label="login" (click)="fetchByData(LoginForm.value)" style="margin:5px">
+    </button>
+    <button pButton pRipple label="signup" (click)="onSelect()" style="margin:5px"></button>
+</form>
+</div>

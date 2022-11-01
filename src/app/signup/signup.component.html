@@ -1,0 +1,50 @@
+<div class="img">
+   <form [formGroup]="submitForm" style="margin-left: 27px;">
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="id"> 
+        <label for="float-input">Client Id</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="clientname"> 
+        <label for="float-input">Client name</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="category"> 
+        <label for="float-input">Client category</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="location"> 
+        <label for="float-input">Client location</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="email"> 
+        <label for="float-input">Client email</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="password"> 
+        <label for="float-input">Client password</label>
+    </span>
+    <br>
+    <br>
+    <span class="p-float-label">
+        <input id="float-input" type="text" pInputText formControlName="confirmpassword"> 
+        <label for="float-input">Client confirmpassword</label>
+    </span>
+    <br>
+    <button pButton pRipple label="Save" style="margin:5px" (click)="onSubmit(submitForm.value)" ></button>
+    <button pButton pRipple label="Cancel" style="margin:5px" (click)="cancel()" icon="pi pi-times"></button>
+</form>
+
+</div>

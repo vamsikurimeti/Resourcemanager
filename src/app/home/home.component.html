@@ -1,0 +1,39 @@
+<div class="homebg">
+<div class="card">
+    <p-table [value]="this.userResult1" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [rowsPerPageOptions]="[1,5,10]" >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>clientname</th>
+                <th>Resource name</th>
+                <th>skills</th>
+                <th>id</th>
+                <th>email</th>
+                <th>status</th>
+            </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-columns>
+            <tr>
+                <td>{{columns.clientname}}</td>
+                <td>{{columns.name}}</td>
+                <td>{{columns.skills}}</td>
+                <td>{{columns.email}}</td>
+                <td>{{columns.id}}</td>
+                <td>{{columns.status}}</td>
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                    (click)="delete(columns.id)"></button>
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
+                    (click)="onSelect(columns)"></button>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" (click)="onSave()" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <!-- <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template> -->
+    </p-table>
+</div>
+</div>
