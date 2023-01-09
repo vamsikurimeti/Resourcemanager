@@ -18,8 +18,6 @@ export class ResourceManagerService {
   }
 
   getClientResourceData(data: any) {
-    console.log(data);
-
     return this.http.post('http://localhost:8000/client/getAllClientResources', data);
   }
 

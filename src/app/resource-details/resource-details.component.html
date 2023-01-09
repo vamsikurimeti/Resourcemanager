@@ -1,37 +1,53 @@
 <div class="resourceimage">
-<form [formGroup]="submitForm" style="margin-left: 20px;">
-    <br>
-    <br>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText formControlName="id"> 
-        <label for="float-input">Resource Id</label>
-    </span>
-    <br>
-    <br>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText formControlName="name"> 
-        <label for="float-input">Resource Name</label>
-    </span>
-    <br>
-    <br>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText formControlName="corporateemail"> 
-        <label for="float-input">corporate email</label>
-    </span>
-    <br>
-    <br>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText formControlName="status"> 
-        <label for="float-input">Status</label>
-    </span>
-    <br>
-    <br>
-    <span class="p-float-label">
-        <input id="float-input" type="text" pInputText formControlName="skills"> 
-        <label for="float-input">Skills</label>
-    </span>
-    <br>
-    <button pButton pRipple label="Save" style="margin:5px" (click)="onSubmit(submitForm.value)" icon="pi pi-check"></button>
-    <button pButton pRipple label="Cancel" style="margin:5px" (click)="cancel()" icon="pi pi-times"></button>
-</form>
+    <div style="font-size: 250%;display: flex;justify-content: center;">
+        <h3>Add New Resource</h3>
+    </div>
+
+    <div style="    display: flex;
+    justify-content: center;
+    align-items: center;">
+    <form [formGroup]="submitForm" style="margin-left: 20px">
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="id">
+            <label for="float-input">Resource Id</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="name">
+            <label for="float-input">Resource Name</label>
+        </span>
+        <br>
+
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="clientname">
+            <label for="float-input">client Name</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="corporateemail">
+            <label for="float-input">corporate email</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="status">
+            <label for="float-input">Status</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input id="float-input" type="text" pInputText formControlName="skills">
+            <label for="float-input">Skills</label>
+        </span>
+        <br>
+        <button pButton pRipple label="Save" style="margin:5px" (click)="onSubmit(submitForm.value)"
+            icon="pi pi-check"></button>
+        <button pButton pRipple label="Cancel" style="margin:5px" (click)="cancel()" icon="pi pi-times"></button>
+    </form>
+</div>
 </div>

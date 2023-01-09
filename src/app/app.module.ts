@@ -21,6 +21,8 @@ import { UpdateComponent } from './update/update.component';
 import { AddResourcesComponent } from './add-resources/add-resources.component';
 import { ResourceDetailsComponent } from './resource-details/resource-details.component';
 import { TdfComponent } from './tdf/tdf.component';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,10 +47,12 @@ import { TdfComponent } from './tdf/tdf.component';
     InputTextModule,
     ButtonModule,
     TableModule,
-    RippleModule
+    RippleModule,
+    ConfirmDialogModule,
+    
 
   ],
-  providers: [MessageService ],
+  providers: [MessageService,ConfirmationService ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })

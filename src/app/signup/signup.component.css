@@ -1,7 +1,9 @@
 .img{
     background-image: url("/assets/Sand to Blue.jpg");
     background-size: cover;
-    height: 200%;
+    height: 100vh;
     overflow: hidden;
     overflow-x: hidden;
+   
+
 }

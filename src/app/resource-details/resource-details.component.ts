@@ -18,7 +18,8 @@ export class ResourceDetailsComponent implements OnInit {
       corporateemail:[''],
       name:[''],
       status:[''],
-      skills:['']
+      skills:[''],
+      clientname:['']
     })
   }
 
@@ -26,14 +27,14 @@ export class ResourceDetailsComponent implements OnInit {
   }
 
   cancel(){
-    this.router.navigate(['/login'])
+    this.router.navigate(['/home'])
   }
 
   onSubmit(data:any){
     this.resource.insertResourceDetails(data).subscribe((data) => { 
       console.log(data)
       window.alert("successfully added resources");
-      this.router.navigate(['/login'])
+      this.router.navigate(['/home'])
       this.userResult = data
   })
 

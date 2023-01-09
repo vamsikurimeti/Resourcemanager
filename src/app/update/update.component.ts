@@ -10,7 +10,7 @@ import { ResourceManagerService } from '../resource-manager.service';
 })
 export class UpdateComponent implements OnInit {
 
-  updateForm: FormGroup  ;
+  updateForm: FormGroup;
   id: any
   userResult:any=[]
   user:any
@@ -20,7 +20,8 @@ export class UpdateComponent implements OnInit {
       id:[''],
       name:[''],
       status:[''],
-      skills:['']
+      skills:[''],
+      clientname:['']
     })
    }
 
@@ -31,7 +32,7 @@ export class UpdateComponent implements OnInit {
       console.log(data)
       this.userResult=data
       // console.log(data)
-      this.user=this.userResult.filter((d:any)=>d.ID==this.id)
+      this.user=this.userResult.filter((d:any)=>d.id==this.id)
       console.log(this.user)
       this.edit(this.user)
     })
@@ -39,11 +40,11 @@ export class UpdateComponent implements OnInit {
 
   edit(result:any){
     this.updateForm.patchValue({
-      id:result[0].ID,
+      id:result[0].id,
       name:result[0].name,
       status:result[0].status,
-      skills:result[0].skills
-  
+      skills:result[0].skills,
+      clientname:result[0].clientname
     })
     this.disable=true
   }
